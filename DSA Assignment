@@ -1,0 +1,1039 @@
+DSA Assignment Q no 1.ipynb 
+@@ -0,0 +1,85 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "cf1d162d",
+   "metadata": {},
+   "source": [
+    "# Q1. Write a program to find all pairs of an integer array whose sum is equal to a given number?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "fb94ef32",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "58474d8c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(5,5)\n",
+      "(6,4)\n",
+      "(7,3)\n",
+      "(8,2)\n",
+      "(9,1)\n"
+     ]
+    }
+   ],
+   "source": [
+    "def sum_pairs(array , num , sum):\n",
+    "    for i in range(num):\n",
+    "        for j in range(i+1 , num):\n",
+    "            if array[i] + array[j] == sum:\n",
+    "                print(\"(\",array[i],\",\",array[j],\")\",sep = \"\")\n",
+    "                \n",
+    "                \n",
+    "                \n",
+    "# drive the code\n",
+    "array = [5,6,4,5,7,3,8,2,9,1]\n",
+    "num = len(array)\n",
+    "sum = 10\n",
+    "\n",
+    "\n",
+    "sum_pairs(array, num, sum)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "303bdaa8",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
+ 80  DSA Assignment Q no 10.ipynb 
+@@ -0,0 +1,80 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "b87f3628",
+   "metadata": {},
+   "source": [
+    "# Q10. Write a program to find the smallest number using a stack."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b7fa2bfd",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "22bf146e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "How many numbers: 5\n",
+      "Enter number: 20\n",
+      "Enter number: 10\n",
+      "Enter number: 50\n",
+      "Enter number: 80\n",
+      "Enter number: 60\n",
+      "Smallest number in the list is :   10\n"
+     ]
+    }
+   ],
+   "source": [
+    "First = []\n",
+    "num = int(input('How many numbers: '))\n",
+    "\n",
+    "for n in range(num):\n",
+    "    numbers = int(input('Enter number: '))\n",
+    "    First.append(numbers)\n",
+    "    \n",
+    "print(\"Smallest number in the list is :  \", min(First))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d9f503e1",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
+ 145  DSA Assignment Q no 2.ipynb 
+@@ -0,0 +1,145 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "16d9f1ac",
+   "metadata": {},
+   "source": [
+    "# Q2. Write a program to reverse an array in place? In place means you cannot create a new array. You have to update the original array."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3c6af485",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "a7028f6e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[10, 20, 130, 40, 150, 80, 100]\n",
+      "REVERSED ARRAY\n",
+      "[100, 80, 150, 40, 130, 20, 10]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def ReverseArray(Array, first, last):\n",
+    "    while first < last:\n",
+    "        Array[first],Array[last] = Array[last],Array[first]\n",
+    "        \n",
+    "        first += 1\n",
+    "        last -= 1\n",
+    "        \n",
+    "        \n",
+    "Array = [10,20,130,40,150,80,100]\n",
+    "print(Array)\n",
+    "ReverseArray(Array, 0, 6)\n",
+    "print(\"REVERSED ARRAY\")\n",
+    "print(Array)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "b44d9341",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[10, 20, 130, 40, 150, 80, 100]\n",
+      "REVERSED ARRAY\n",
+      "[80, 150, 40, 130, 20, 10, 100]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def ReverseArray(Array, first, last):\n",
+    "    while first < last:\n",
+    "        Array[first],Array[last] = Array[last],Array[first]\n",
+    "        \n",
+    "        first += 1\n",
+    "        last -= 1\n",
+    "        \n",
+    "        \n",
+    "Array = [10,20,130,40,150,80,100]\n",
+    "print(Array)\n",
+    "ReverseArray(Array, 0, 5)\n",
+    "print(\"REVERSED ARRAY\")\n",
+    "print(Array)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "4938a448",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[9, 8, 6, 5, 1]"
+      ]
+     },
+     "execution_count": 2,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "def Array(array):\n",
+    "    return array[::-1]\n",
+    "array = [1,5,6,8,9]\n",
+    "Array(array)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "00dec562",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "185d0cc3",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
+ 78  DSA Assignment Q no 3.ipynb 
+@@ -0,0 +1,78 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "38df92ff",
+   "metadata": {},
+   "source": [
+    "# Q3. Write a program to check if two strings are a rotation of each other?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "06dfb6eb",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "65de4624",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "the string is rotating of each other\n"
+     ]
+    }
+   ],
+   "source": [
+    "def is_rotation(string1,string2):\n",
+    "    if len(string1) != len(string2):\n",
+    "        return False\n",
+    "    s = string1 + string1\n",
+    "    return s2 in s\n",
+    "\n",
+    "string1 = \"ABCDEFG\"\n",
+    "string2 = \"DEFGABC\"\n",
+    "if is_rotation(string1,string2):\n",
+    "    print(\"the string is rotating of each other\")\n",
+    "else:\n",
+    "    print(\"the string is not rotating of each other\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "741ff002",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
+ 114  DSA Assignment Q no 4.ipynb 
+@@ -0,0 +1,114 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "65603c9f",
+   "metadata": {},
+   "source": [
+    "# Q4. Write a program to print the first non-repeated character from a string?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "acdd4b22",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      ">>>Edyoda\n",
+      "the first founded string variable is:  E\n"
+     ]
+    }
+   ],
+   "source": [
+    "str1 = input(\">>>\" )\n",
+    "found = None\n",
+    "\n",
+    "for i in str1:\n",
+    "    if (str1.count(i) == 1):\n",
+    "        print(\"the first founded string variable is: \",i)\n",
+    "        found = True\n",
+    "        break\n",
+    "\n",
+    "if (found == False):\n",
+    "    print(\"there is non repeating char in str1\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "1f5e48e9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1st non-repeating character is: R\n"
+     ]
+    }
+   ],
+   "source": [
+    "NO_OF_CHARS = 256\n",
+    "\n",
+    "def getCharCountArray(string):\n",
+    "    count = [0] * NO_OF_CHARS\n",
+    "    for i in string:\n",
+    "        count[ord(i)]+= 1\n",
+    "    return count\n",
+    "\n",
+    "def firstNonRepeating(string):\n",
+    "    count = getCharCountArray(string)\n",
+    "    index = -1\n",
+    "    k = 0\n",
+    "\n",
+    "    for i in string:\n",
+    "        if count[ord(i)] == 1:\n",
+    "            index = k\n",
+    "            break\n",
+    "        k += 1\n",
+    "\n",
+    "    return index\n",
+    "\n",
+    "string = \"Rambabu\"\n",
+    "index = firstNonRepeating(string)\n",
+    "if index == 1:\n",
+    "    print (\"Either all characters are repeating or string is empty\")\n",
+    "else:\n",
+    "    print (\"1st non-repeating character is: \" + string[index])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "900192f8",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
+ 82  DSA Assignment Q no 5.ipynb 
+@@ -0,0 +1,82 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "ee3589b4",
+   "metadata": {},
+   "source": [
+    "# Q5. Read about the Tower of Hanoi algorithm. Write a program to implement it."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "871ad0e0",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Move disk 1 from rod A to rod B\n",
+      "Move disk 2 from rod A to rod C\n",
+      "Move disk 1 from rod B to rod C\n",
+      "Move disk 3 from rod A to rod B\n",
+      "Move disk 1 from rod C to rod A\n",
+      "Move disk 2 from rod C to rod B\n",
+      "Move disk 1 from rod A to rod B\n",
+      "Move disk 4 from rod A to rod C\n",
+      "Move disk 1 from rod B to rod C\n",
+      "Move disk 2 from rod B to rod A\n",
+      "Move disk 1 from rod C to rod A\n",
+      "Move disk 3 from rod B to rod C\n",
+      "Move disk 1 from rod A to rod B\n",
+      "Move disk 2 from rod A to rod C\n",
+      "Move disk 1 from rod B to rod C\n"
+     ]
+    }
+   ],
+   "source": [
+    "def TowerOfHanoi(n , from_rod, to_rod, aux_rod):\n",
+    "    if n == 1:\n",
+    "        print(\"Move disk 1 from rod\",from_rod,\"to rod\",to_rod)\n",
+    "        return\n",
+    "    TowerOfHanoi(n-1, from_rod, aux_rod, to_rod)\n",
+    "    print(\"Move disk\",n,\"from rod\",from_rod,\"to rod\",to_rod)\n",
+    "    TowerOfHanoi(n-1, aux_rod, to_rod, from_rod)\n",
+    "    \n",
+    "n = 4\n",
+    "TowerOfHanoi(n, 'A', 'C', 'B')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "39860749",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
+ 115  DSA Assignment Q no 6.ipynb 
+@@ -0,0 +1,115 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "00c895ff",
+   "metadata": {},
+   "source": [
+    "#  Read about infix, prefix, and postfix expressions. Write a program to convert postfix to prefix expression."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "53f0e7f2",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "ce31baf3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Prefix :  +AB-CD\n"
+     ]
+    }
+   ],
+   "source": [
+    "def isOperator(x):\n",
+    "\n",
+    "    if x == \"+\":\n",
+    "        return True\n",
+    "\n",
+    "    if x == \"-\":\n",
+    "        return True\n",
+    "\n",
+    "    if x == \"/\":\n",
+    "        return True\n",
+    "\n",
+    "    if x == \"*\":\n",
+    "        return True\n",
+    "\n",
+    "    return False\n",
+    "\n",
+    "def postToPre(post_exp):\n",
+    "\n",
+    "    s = []\n",
+    "\n",
+    "    length = len(post_exp)\n",
+    "\n",
+    "    for i in range(length):\n",
+    "\n",
+    "        if (isOperator(post_exp[i])):\n",
+    "\n",
+    "            op1 = s[-1]\n",
+    "            s.pop()\n",
+    "            op2 = s[-1]\n",
+    "            s.pop()\n",
+    "\n",
+    "            temp = post_exp[i] + op2 + op1\n",
+    "\n",
+    "            s.append(temp)\n",
+    "\n",
+    "        else:\n",
+    "\n",
+    "            s.append(post_exp[i])\n",
+    "\n",
+    "    ans = \"\"\n",
+    "    for i in s:\n",
+    "        ans += i\n",
+    "    return ans\n",
+    "\n",
+    "if __name__ == \"__main__\":\n",
+    "\n",
+    "    post_exp = \"AB+CD-\"\n",
+    "\n",
+    "    print(\"Prefix : \", postToPre(post_exp))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "20a69e27",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
+ 92  DSA Assignment Q no 7.ipynb 
+@@ -0,0 +1,92 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "36f0e2d5",
+   "metadata": {},
+   "source": [
+    "# Q7. Write a program to convert prefix expression to infix expression"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e871b6cf",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "2ee45336",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "((A-(B/C))*((A/K)-L))\n"
+     ]
+    }
+   ],
+   "source": [
+    "def prefixToInfix(prefix):\n",
+    "    stack = []\n",
+    "\n",
+    "    i = len(prefix) - 1\n",
+    "    while i >= 0:\n",
+    "        if not isOperator(prefix[i]):\n",
+    "\n",
+    "            stack.append(prefix[i])\n",
+    "            i -= 1\n",
+    "        else:\n",
+    "\n",
+    "            str = \"(\" + stack.pop() + prefix[i] + stack.pop() + \")\"\n",
+    "            stack.append(str)\n",
+    "            i -= 1\n",
+    "\n",
+    "    return stack.pop()\n",
+    "\n",
+    "def isOperator(c):\n",
+    "    if c == \"*\" or c == \"+\" or c == \"-\" or c == \"/\" or c == \"^\" or c == \"(\" or c == \")\":\n",
+    "        return True\n",
+    "    else:\n",
+    "        return False\n",
+    "\n",
+    "if __name__==\"__main__\":\n",
+    "    str = \"*-A/BC-/AKL\"\n",
+    "    print(prefixToInfix(str))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "317e39bd",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
+ 99  DSA Assignment Q no 8.ipynb 
+@@ -0,0 +1,99 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "61efb3f1",
+   "metadata": {},
+   "source": [
+    "# Q8. Write a program to check if all the brackets are closed in a given code snippet."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "69fd66aa",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "e6e15434",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Balanced\n"
+     ]
+    }
+   ],
+   "source": [
+    "def areBracketsBalanced(expr):\n",
+    "    stack = []\n",
+    "\n",
+    "    for char in expr:\n",
+    "        if char in [\"(\", \"{\", \"[\"]:\n",
+    "\n",
+    "            stack.append(char)\n",
+    "        else:\n",
+    "\n",
+    "            if not stack:\n",
+    "                return False\n",
+    "            current_char = stack.pop()\n",
+    "            if current_char == '(':\n",
+    "                if char != \")\":\n",
+    "                    return False\n",
+    "            if current_char == '{':\n",
+    "                if char != \"}\":\n",
+    "                    return False\n",
+    "            if current_char == '[':\n",
+    "                if char != \"]\":\n",
+    "                    return False\n",
+    "\n",
+    "    if stack:\n",
+    "        return False\n",
+    "    return True\n",
+    "\n",
+    "if __name__ == \"__main__\":\n",
+    "    expr = \"{()}[]\"\n",
+    "\n",
+    "    if areBracketsBalanced(expr):\n",
+    "        print(\"Balanced\")\n",
+    "    else:\n",
+    "        print(\"Not Balanced\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f1809f2b",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
+ 129  DSA Assignment Q no 9.ipynb 
+@@ -0,0 +1,129 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "4cb4194c",
+   "metadata": {},
+   "source": [
+    "# Q9. Write a program to reverse a stack."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f7c82685",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "2e80842e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Original Stack\n",
+      "5\n",
+      "4\n",
+      "3\n",
+      "2\n",
+      "1\n",
+      "\n",
+      "Stack after Reversing\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "5\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Stack:\n",
+    "\n",
+    "    def __init__(self):\n",
+    "        self.Elements = []\n",
+    "\n",
+    "    def push(self, value):\n",
+    "        self.Elements.append(value)\n",
+    "        \n",
+    "    def pop(self):\n",
+    "        return self.Elements.pop()\n",
+    "    \n",
+    "    def empty(self):\n",
+    "        return self.Elements == []\n",
+    "\n",
+    "    def show(self):\n",
+    "        for value in reversed(self.Elements):\n",
+    "            print(value)\n",
+    "\n",
+    "def BottomInsert(s, value):\n",
+    "\n",
+    "    if s.empty():\n",
+    "\n",
+    "        s.push(value)\n",
+    "\n",
+    "    else:\n",
+    "        popped = s.pop()\n",
+    "        BottomInsert(s, value)\n",
+    "        s.push(popped)\n",
+    "\n",
+    "def Reverse(s):\n",
+    "    if s.empty():\n",
+    "        pass\n",
+    "    else:\n",
+    "        popped = s.pop()\n",
+    "        Reverse(s)\n",
+    "        BottomInsert(s, popped)\n",
+    "\n",
+    "stk = Stack()\n",
+    "\n",
+    "stk.push(1)\n",
+    "stk.push(2)\n",
+    "stk.push(3)\n",
+    "stk.push(4)\n",
+    "stk.push(5)\n",
+    "\n",
+    "print(\"Original Stack\")\n",
+    "stk.show()\n",
+    "\n",
+    "print(\"\\nStack after Reversing\")\n",
+    "Reverse(stk)\n",
+    "stk.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "41f05d00",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
